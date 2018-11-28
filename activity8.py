@@ -16,11 +16,15 @@ def display_title():
     print()
     print("Customer Viewer")
     print()
+
+
 ##function for opening csv file in read mode
 def csv_reader():
     csvfile = open('customers.csv','r')
     customers_csv = csv.reader(csvfile)
     return customers_csv
+
+
 ##function for finding customer id and printing the details of corresponding row
 def find_customer(cust_id):
     for row in csv_reader():
@@ -40,6 +44,9 @@ def find_customer(cust_id):
             break
     else:
         print('No customer with that specified ID.')
+
+
+        
 #main function
 def main():
     display_title()
